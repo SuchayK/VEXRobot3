@@ -3,11 +3,6 @@ using namespace vex;
 
 competition Competition;
 
-motor lift(PORT1, gearSetting::ratio18_1, false);
-digital_out wings(Brain.ThreeWirePort.A);
-digital_out left_wing(Brain.ThreeWirePort.B);
-digital_out right_wing(Brain.ThreeWirePort.C);
-
 double robotX = 0.0; 
 double robotY = 0.0; 
 double robotTheta = 0.0; 
@@ -361,30 +356,13 @@ void autonomous(void) {
   moveForward(1.0);
   wait(1, sec);
 
-  // Top Left - Bottom Right
-
-	moveForward(2.0);
-  (1, sec);
-
-  turnPID(90);
-  wait(1, sec);
-
-  moveForward(1.5);
-  wait(1, sec);
-
   turnPID(45);
-  wait(1, sec);
-
-  moveBack(1.0);
-  wait(1, sec);
-
-  turnPID(-90);
   wait(1, sec);
 
   moveForward(2.5);
   wait(1, sec);
 
-  turnPID(-45);
+  turnPID(135);
   wait(1, sec);
 
   moveBack(1.5);
@@ -396,25 +374,7 @@ void autonomous(void) {
   moveForward(3.0);
   wait(1, sec);
 
-  turnPID(90);
-  wait(1, sec);
-
-  moveBack(2.0);
-  wait(1, sec);
-
-  turnPID(135);
-  wait(1, sec);
-
-  moveForward(1.5);
-  wait(1, sec);
-
   turnPID(-135);
-  wait(1, sec);
-
-  moveBack(1.0);
-  wait(1, sec);
-
-  turnPID(-180);
   wait(1, sec);
 
   moveForward(2.0);
@@ -423,7 +383,7 @@ void autonomous(void) {
   turnPID(45);
   wait(1, sec);
 
-  moveBack(2.5);
+  moveBack(1.5);
   wait(1, sec);
 
   turnPID(-90);
@@ -432,7 +392,7 @@ void autonomous(void) {
   moveForward(1.0);
   wait(1, sec);
 
-  turnPID(-45);
+  turnPID(180);
   wait(1, sec);
 
   moveBack(2.0);
@@ -443,6 +403,90 @@ void autonomous(void) {
 
   moveForward(1.5);
   wait(1, sec);
+
+
+  // Top Left - Bottom Right
+
+	// moveForward(2.0);
+  // (1, sec);
+
+  // turnPID(90);
+  // wait(1, sec);
+
+  // moveForward(1.5);
+  // wait(1, sec);
+
+  // turnPID(45);
+  // wait(1, sec);
+
+  // moveBack(1.0);
+  // wait(1, sec);
+
+  // turnPID(-90);
+  // wait(1, sec);
+
+  // moveForward(2.5);
+  // wait(1, sec);
+
+  // turnPID(-45);
+  // wait(1, sec);
+
+  // moveBack(1.5);
+  // wait(1, sec);
+
+  // turnPID(180);
+  // wait(1, sec);
+
+  // moveForward(3.0);
+  // wait(1, sec);
+
+  // turnPID(90);
+  // wait(1, sec);
+
+  // moveBack(2.0);
+  // wait(1, sec);
+
+  // turnPID(135);
+  // wait(1, sec);
+
+  // moveForward(1.5);
+  // wait(1, sec);
+
+  // turnPID(-135);
+  // wait(1, sec);
+
+  // moveBack(1.0);
+  // wait(1, sec);
+
+  // turnPID(-180);
+  // wait(1, sec);
+
+  // moveForward(2.0);
+  // wait(1, sec);
+
+  // turnPID(45);
+  // wait(1, sec);
+
+  // moveBack(2.5);
+  // wait(1, sec);
+
+  // turnPID(-90);
+  // wait(1, sec);
+
+  // moveForward(1.0);
+  // wait(1, sec);
+
+  // turnPID(-45);
+  // wait(1, sec);
+
+  // moveBack(2.0);
+  // wait(1, sec);
+
+  // turnPID(90);
+  // wait(1, sec);
+
+  // moveForward(1.5);
+  // wait(1, sec);
 
 }
 
