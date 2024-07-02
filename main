@@ -77,9 +77,9 @@ void leftDegrees(double x) {
 }
 
 void moveForward(double targetDistance) {
-  double kP = 0.6;
-  double kI = 0.04;
-  double kD = 0.3;
+  double kP = 0.3;
+  double kI = 0.01;
+  double kD = 0.002;
   double Kc = 0.5;
   double error = targetDistance;
   double previousError = 0;
@@ -117,9 +117,9 @@ void moveForward(double targetDistance) {
 }
 
 void moveBack(double targetDistance) {
-  double kP = 0.6;
-  double kI = 0.04;
-  double kD = 0.3;
+  double kP = 0.3;
+  double kI = 0.01;
+  double kD = 0.002;
   double Kc = 0.5;
   double error = targetDistance;
   double previousError = 0;
@@ -316,6 +316,61 @@ void pre_auton(void) {
 }
 
 void autonomous(void) {
+
+  moveForward(2.0);
+  wait(1, sec);
+
+  turnPID(90);
+  wait(1, sec);
+
+  moveForward(1.5);
+  wait(1, sec);
+
+  turnPID(45);
+  wait(1, sec);
+
+  moveBack(1.0);
+  wait(1, sec);
+
+  turnPID(-90);
+  wait(1, sec);
+
+  moveForward(2.5);
+  wait(1, sec);
+
+  turnPID(-45);
+  wait(1, sec);
+
+  moveBack(1.5);
+  wait(1, sec);
+
+  turnPID(180);
+  wait(1, sec);
+
+  moveForward(3.0);
+  wait(1, sec);
+
+  turnPID(90);
+  wait(1, sec);
+
+  moveBack(2.0);
+  wait(1, sec);
+
+  turnPID(135);
+  wait(1, sec);
+
+  moveForward(1.5);
+  wait(1, sec);
+
+  turnPID(-135);
+  wait(1, sec);
+
+  moveBack(1.0);
+  wait(1, sec);
+
+  turnPID(-180);
+  wait(1, sec);
+
 
 }
 
